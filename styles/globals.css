@@ -1,0 +1,388 @@
+/* Amaranath font */
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "LiAdor";
+    src: url("../public/Fonts/Unicode/AdorBhaiya.ttf");
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.book-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 my-5 lg:px-32 md:px-20 px-2 gap-4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  /* line-height: 1px; */
+}
+
+::-webkit-scrollbar {
+  width: 0.6em;
+}
+@media screen and (max-width: 780px) {
+  ::-webkit-scrollbar {
+    display: block;
+  }
+}
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #a4a4a4;
+}
+.primary-scroll::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.primary-scroll::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #f26133 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(139, 139, 139);
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.small-scrollbar::-webkit-scrollbar {
+  width: 0.3em !important;
+}
+.little-scrollbar::-webkit-scrollbar {
+  height: 0.3em !important;
+}
+::selection {
+  background: #0f172a;
+  color: #fff;
+}
+img::selection {
+  background: transparent;
+}
+/* Custom styles */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid-col-1 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.profile-container {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+  .profile-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 780px) {
+  .profile-container {
+    max-width: 100%;
+    @apply px-2;
+  }
+}
+/* @media screen and (min-width: 780px) {
+  .profile-container {
+    max-width: 90%;
+    margin: 0;
+  }
+} */
+
+.custom-container {
+  max-width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1264px) {
+  .custom-container {
+    max-width: 90%;
+    /* @apply px-10; */
+  }
+}
+@media screen and (max-width: 780px) {
+  .custom-container {
+    max-width: 100%;
+    @apply px-2;
+  }
+}
+
+.details-container {
+  max-width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1264px) {
+  .details-container {
+    max-width: 90%;
+    /* @apply px-10; */
+  }
+}
+@media screen and (max-width: 780px) {
+  .details-container {
+    max-width: 100%;
+  }
+}
+
+/* Components  */
+
+@keyframes square-animation {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  10.5% {
+    left: 0;
+    top: 0;
+  }
+
+  12.5% {
+    left: 32px;
+    top: 0;
+  }
+
+  23% {
+    left: 32px;
+    top: 0;
+  }
+
+  25% {
+    left: 64px;
+    top: 0;
+  }
+
+  35.5% {
+    left: 64px;
+    top: 0;
+  }
+
+  37.5% {
+    left: 64px;
+    top: 32px;
+  }
+
+  48% {
+    left: 64px;
+    top: 32px;
+  }
+
+  50% {
+    left: 32px;
+    top: 32px;
+  }
+
+  60.5% {
+    left: 32px;
+    top: 32px;
+  }
+
+  62.5% {
+    left: 32px;
+    top: 64px;
+  }
+
+  73% {
+    left: 32px;
+    top: 64px;
+  }
+
+  75% {
+    left: 0;
+    top: 64px;
+  }
+
+  85.5% {
+    left: 0;
+    top: 64px;
+  }
+
+  87.5% {
+    left: 0;
+    top: 32px;
+  }
+
+  98% {
+    left: 0;
+    top: 32px;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+/* From uiverse.io by @Mike11jr */
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.spinner .dot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner .dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #f26133;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner .dot {
+  animation: spin 1.5s infinite;
+}
+
+.spinner .dot:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.spinner .dot:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.spinner .dot:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.spinner .dot:nth-child(5) {
+  animation-delay: 400ms;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  color: transparent !important;
+  transition: all 0.2s ease;
+  height: 4px;
+}
+.swiper-slide-banner {
+  color: #ebebeb;
+  font-size: 1.2em;
+}
+.swiper-button-next {
+  background-image: url("../public/image/arrow-right.png") !important;
+}
+.swiper-button-prev {
+  background-image: url("../public/image/arrow-left.png") !important;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #f26133;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+}
+.swiper-pagination-bullet {
+  background-color: black;
+  opacity: 1;
+  width: 12px !important;
+  height: 12px !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+.loginbg {
+  background-image: url("../public/image/loginbg.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0px;
+}
+.slick-next {
+  background: url("../public/image/arrow-right.png") center center no-repeat !important;
+}
+.slick-next::before {
+  background: url("../public/image/arrow-right.png") center center no-repeat !important;
+  display: none;
+}
+
+.slick-prev {
+  background: url("../public/image/arrow-left.png") center center no-repeat !important;
+}
+.slick-prev::before {
+  background: url("../public/image/arrow-left.png") center center no-repeat !important;
+  display: none;
+}
+@media screen and (max-width: 780px) {
+  .slick-next {
+    right: -3px !important;
+  }
+  .slick-prev {
+    left: -3px !important;
+    z-index: 1;
+  }
+}
+
+.hover-bg {
+  background: hsla(222, 47%, 11%, 1);
+
+  background: linear-gradient(
+    180deg,
+    rgba(138, 138, 138, 0.425) 50%,
+    rgba(15, 23, 41, 0.253) 0%
+  );
+
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(138, 138, 138, 0.253) 50%,
+    hsla(222, 47%, 11%, 1) 0%
+  );
+
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(138, 138, 138, 0.253) 50% hsla(222, 47%, 11%, 1) 0%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0F172A", endColorstr="#8A8A8A", GradientType=1 );
+}
